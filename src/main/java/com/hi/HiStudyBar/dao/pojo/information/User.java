@@ -15,21 +15,22 @@ public class User {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO) 
+	@Column(name = "u_id")
 	private Integer uId;
 	
-	@Column(name = "u_name", nullable = false) 
+	@Column(name = "u_name", nullable = false , length = 20) 
 	private String uName;
 	
-	@Column(name = "u_password", nullable = false) 
+	@Column(name = "u_password", nullable = false , length = 20) 
 	private String uPassword;
 	
-	@Column(name = "u_true_name") 
+	@Column(name = "u_true_name" , length = 20) 
 	private String uTrueName;
 	
-	@Column(name = "u_sex") 
+	@Column(name = "u_sex" , length = 2) 
 	private String uSex;
 	
-	@Column(name = "u_head_pic") 
+	@Column(name = "u_head_pic" , length = 100) 
 	private String uHeadPic;
 	
 	 // 多对一：optional=false表示外键不能为空
@@ -37,16 +38,16 @@ public class User {
 	@JoinColumn(name = "univ_id")
 	private University university;
 	
-	@Column(name = "u_institute") 
+	@Column(name = "u_institute" , length = 20) 
 	private String uInstitute;
 	
-	@Column(name = "u_magor") 
+	@Column(name = "u_magor" , length = 20) 
 	private String uMagor;
 	
-	@Column(name = "u_phonenumber") 
+	@Column(name = "u_phonenumber" , length = 20) 
 	private String uPhonenumber;
 	
-	@Column(name = "u_email") 
+	@Column(name = "u_email" , length = 50) 
 	private String uEmail;
 
 	public User() {

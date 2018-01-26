@@ -13,12 +13,13 @@ public class University {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO) 
+	@Column(name = "univ_id")
 	private Integer univId;
 	
-	@Column(name = "univ_name") 
+	@Column(name = "univ_name" , length = 30) 
 	private String univName;
 	
-	@Column(name = "univ_area") 
+	@Column(name = "univ_area" , length = 30) 
 	private String univArea;
 
 	public University() {

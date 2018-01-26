@@ -13,12 +13,13 @@ public class Label {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO) 
+	@Column(name = "l_id")
 	private Integer lId;
 	
-	@Column(name = "l_description") 
+	@Column(name = "l_description" , length = 20) 
 	private String lDescription;
 	
-	@Column(name = "l_type") 
+	@Column(name = "l_type" , length = 20) 
 	private String lType;
 
 	public Label() {

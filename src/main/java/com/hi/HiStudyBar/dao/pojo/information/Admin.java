@@ -13,27 +13,28 @@ public class Admin {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO) 
+	@Column(name = "admin_id")
 	private Integer adminId;
 	
-	@Column(name = "admin_name" , nullable = false) 
+	@Column(name = "admin_name" , nullable = false , length = 20) 
 	private String adminName;
 	
-	@Column(name = "admin_password" , nullable = false) 
+	@Column(name = "admin_password" , nullable = false , length = 20) 
 	private String adminPassword;
 	
-	@Column(name = "admin_true_name") 
+	@Column(name = "admin_true_name" , length = 20) 
 	private String adminTrueName;
 	
-	@Column(name = "admin_sex") 
+	@Column(name = "admin_sex" , length = 2) 
 	private String adminSex;
 	
-	@Column(name = "admin_head_pic") 
+	@Column(name = "admin_head_pic" , length = 100) 
 	private String adminHeadPic;
 	
-	@Column(name = "admin_phonenumber") 
+	@Column(name = "admin_phonenumber" , length = 20) 
 	private String adminPhonenumber;
 	
-	@Column(name = "admin_email") 
+	@Column(name = "admin_email" , length = 50) 
 	private String adminEmail;
 
 	public Admin() {
