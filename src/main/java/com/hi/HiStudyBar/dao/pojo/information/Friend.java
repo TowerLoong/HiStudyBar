@@ -1,5 +1,7 @@
 package com.hi.HiStudyBar.dao.pojo.information;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -15,7 +17,7 @@ public class Friend {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO) 
-	@Column(name = "friend_id")
+	@Column(name = "f_id")
 	private Integer friendId;
 	
 	@ManyToOne(optional = true)
@@ -25,45 +27,14 @@ public class Friend {
 	@ManyToOne(optional = true)
 	@JoinColumn(name = "u_id2")
 	private User user2;
+	
+	@Column(name = "f_begintime") 
+	private Date f_begintime;
 
 	public Friend() {
 		super();
 	}
 
-	public Friend(Integer friendId, User user1, User user2) {
-		super();
-		this.friendId = friendId;
-		this.user1 = user1;
-		this.user2 = user2;
-	}
-
-	@Override
-	public String toString() {
-		return "Friend [friendId=" + friendId + ", user1=" + user1 + ", user2=" + user2 + "]";
-	}
-
-	public Integer getFriendId() {
-		return friendId;
-	}
-
-	public void setFriendId(Integer friendId) {
-		this.friendId = friendId;
-	}
-
-	public User getUser1() {
-		return user1;
-	}
-
-	public void setUser1(User user1) {
-		this.user1 = user1;
-	}
-
-	public User getUser2() {
-		return user2;
-	}
-
-	public void setUser2(User user2) {
-		this.user2 = user2;
-	}
+	
 	
 }
