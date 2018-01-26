@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>logined.html</title>
+<meta charset="UTF-8">
+
+<!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+<script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+
+function login(){
+    var optionJson=[];
+    
+    $.ajax({
+        type:"post",
+        url:"/loginIn",
+        data:{},
+        async: false,
+        success:function (data) {
+            optionJson=data;
+
+            document.getElementById("name").innerHTML=optionJson.name;
+            document.getElementById("password").innerHTML=optionJson.password;
+        }
+    });
+    
+}
+
+</script>
+
+</head>
+
+<body>
+	名字是<p id="name">未登录</p>
+	密码是<p id="password">未登录</p>
+	<button onclick="login()">登录</button>　
+	<br>
+</body>
+</html>
