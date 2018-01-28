@@ -5,7 +5,12 @@ import org.springframework.stereotype.Repository;
 
 import com.hi.HiStudyBar.dao.pojo.information.User;
 
+/**
+ * 2018.1.28
+ * @author Tower
+ * 操控User的dao层接口
+ */
 @Repository
-public interface IUserDao extends JpaRepository<User,Integer>{
+public interface IUserDao  extends JpaRepository<User,Integer>{
 
 }
