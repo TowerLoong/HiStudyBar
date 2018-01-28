@@ -41,8 +41,8 @@ public class BbsNote {
 	@JoinColumn(name = "nt_id")
 	private NoteType noteType;//帖子类型（外键）
 	
-	@Column(name = "b_time") 
-	private Date bTime;//发帖时间（精确到秒）
+	@Column(name = "b_time" , nullable = false) 
+	private Date bTime;//发帖时间（精确到秒）（不能为空）
 	
 	@Column(name = "b_like_num") 
 	private Integer bLikeNum;//点赞数目

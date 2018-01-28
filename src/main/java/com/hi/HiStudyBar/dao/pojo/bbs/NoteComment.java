@@ -22,7 +22,7 @@ import com.hi.HiStudyBar.dao.pojo.information.User;
 @Entity  
 @Table(name = "t_note_comment")
 public class NoteComment {
-
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO) 
 	@Column(name = "nc_id")
@@ -46,8 +46,8 @@ public class NoteComment {
 	@Column(name = "nc_message" , nullable = false , length = 255)
 	private String ncMessage;//回复的具体信息（少于200字符，不能为空）
 	
-	@Column(name = "nc_time") 
-	private Date ncTime;//评论（回复）时间（精确到秒）
+	@Column(name = "nc_time" , nullable = false) 
+	private Date ncTime;//评论（回复）时间（精确到秒）（不能为空）
 	
 	@Column(name = "nc_like_num") 
 	private Integer ncLikeNum;//这条评论（回复）的点赞数目

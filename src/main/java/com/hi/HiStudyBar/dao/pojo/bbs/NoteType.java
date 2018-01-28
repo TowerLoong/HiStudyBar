@@ -11,7 +11,7 @@ import javax.persistence.Table;
  * 2018.1.27
  * @author Tower
  * 帖子类型表对应的实体类
- * 包含求助帖（help）、项目帖（project）、（活动比赛等的）组队贴（union）、分享帖（share）
+ * 包含求助帖（help）、项目帖（project）、（活动比赛等的）组队贴（union）、生活帖（share）
  */
 @Entity  
 @Table(name = "t_note_type")

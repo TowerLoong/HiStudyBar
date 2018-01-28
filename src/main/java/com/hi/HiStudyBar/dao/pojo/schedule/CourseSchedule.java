@@ -59,13 +59,17 @@ public class CourseSchedule {
 	@ManyToOne(optional = true)
 	@JoinColumn(name = "cs_course6")
 	private Course course6;//第六讲课程
+	
+	@ManyToOne(optional = true)
+	@JoinColumn(name = "cs_course7")
+	private Course course7;//第七讲课程（保留字段，应对个别学校课比较多的情况）
 
 	public CourseSchedule() {
 		super();
 	}
 
 	public CourseSchedule(Integer csId, User user, String csNowWeek, String csNowDay, Course course1, Course course2,
-			Course course3, Course course4, Course course5, Course course6) {
+			Course course3, Course course4, Course course5, Course course6, Course course7) {
 		super();
 		this.csId = csId;
 		this.user = user;
@@ -77,13 +81,14 @@ public class CourseSchedule {
 		this.course4 = course4;
 		this.course5 = course5;
 		this.course6 = course6;
+		this.course7 = course7;
 	}
 
 	@Override
 	public String toString() {
 		return "CourseSchedule [csId=" + csId + ", user=" + user + ", csNowWeek=" + csNowWeek + ", csNowDay=" + csNowDay
 				+ ", course1=" + course1 + ", course2=" + course2 + ", course3=" + course3 + ", course4=" + course4
-				+ ", course5=" + course5 + ", course6=" + course6 + "]";
+				+ ", course5=" + course5 + ", course6=" + course6 + ", course7=" + course7 + "]";
 	}
 
 	public Integer getCsId() {
@@ -164,6 +169,14 @@ public class CourseSchedule {
 
 	public void setCourse6(Course course6) {
 		this.course6 = course6;
+	}
+
+	public Course getCourse7() {
+		return course7;
+	}
+
+	public void setCourse7(Course course7) {
+		this.course7 = course7;
 	}
 	
 }

@@ -41,13 +41,16 @@ public class Admin {
 	
 	@Column(name = "admin_email" , length = 100) 
 	private String adminEmail;//管理员邮箱（少于50个字符）
+	
+	@Column(name = "admin_power" ,length = 20) 
+	private String adminPower;//管理员在系统中的权限（“1”代表顶级，“2”代表中级，“3”代表初级）
 
 	public Admin() {
 		super();
 	}
 
 	public Admin(Integer adminId, String adminName, String adminPassword, String adminTrueName, String adminSex,
-			String adminHeadPic, String adminPhonenumber, String adminEmail) {
+			String adminHeadPic, String adminPhonenumber, String adminEmail, String adminPower) {
 		super();
 		this.adminId = adminId;
 		this.adminName = adminName;
@@ -57,13 +60,15 @@ public class Admin {
 		this.adminHeadPic = adminHeadPic;
 		this.adminPhonenumber = adminPhonenumber;
 		this.adminEmail = adminEmail;
+		this.adminPower = adminPower;
 	}
 
 	@Override
 	public String toString() {
 		return "Admin [adminId=" + adminId + ", adminName=" + adminName + ", adminPassword=" + adminPassword
 				+ ", adminTrueName=" + adminTrueName + ", adminSex=" + adminSex + ", adminHeadPic=" + adminHeadPic
-				+ ", adminPhonenumber=" + adminPhonenumber + ", adminEmail=" + adminEmail + "]";
+				+ ", adminPhonenumber=" + adminPhonenumber + ", adminEmail=" + adminEmail + ", adminPower=" + adminPower
+				+ "]";
 	}
 
 	public Integer getAdminId() {
@@ -128,6 +133,14 @@ public class Admin {
 
 	public void setAdminEmail(String adminEmail) {
 		this.adminEmail = adminEmail;
+	}
+
+	public String getAdminPower() {
+		return adminPower;
+	}
+
+	public void setAdminPower(String adminPower) {
+		this.adminPower = adminPower;
 	}
 	
 }

@@ -23,10 +23,10 @@ public class Label {
 	@Column(name = "l_id")
 	private Integer lId;//主键
 	
-	@Column(name = "l_description" , length = 20) 
+	@Column(name = "l_description" , length = 20 ) 
 	private String lDescription;//标签描述（少于10个字符）
 	
-	@Column(name = "l_type" , length = 20) 
+	@Column(name = "l_type" , length = 20 ) 
 	private String lType;//标签类型（少于10个字符，“1”代表用户，“2”代表学校，“3”代表群）
 
 	public Label() {
