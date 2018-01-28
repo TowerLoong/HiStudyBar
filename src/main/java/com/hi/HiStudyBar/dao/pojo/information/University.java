@@ -7,20 +7,25 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+/**
+ * 2018.1.26
+ * @author Tower
+ * 大学信息表对应的实体类
+ */
 @Entity  
-@Table(name = "university")
+@Table(name = "t_university")
 public class University {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO) 
 	@Column(name = "univ_id")
-	private Integer univId;
+	private Integer univId;//主键
 	
-	@Column(name = "univ_name" , length = 30) 
-	private String univName;
+	@Column(name = "univ_name" , length = 100) 
+	private String univName;//大学名称（少于50个字符）
 	
-	@Column(name = "univ_area" , length = 30) 
-	private String univArea;
+	@Column(name = "univ_area" , length = 100) 
+	private String univArea;//大学校区（少于50个字符）
 
 	public University() {
 		super();

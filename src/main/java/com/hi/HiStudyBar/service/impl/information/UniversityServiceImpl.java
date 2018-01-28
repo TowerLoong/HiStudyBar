@@ -1,11 +1,11 @@
-package com.hi.HiStudyBar.service.information.impl;
+package com.hi.HiStudyBar.service.impl.information;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.hi.HiStudyBar.dao.intf.information.IUniversityDao;
 import com.hi.HiStudyBar.dao.pojo.information.University;
-import com.hi.HiStudyBar.service.information.intf.IUniversityService;
+import com.hi.HiStudyBar.service.intf.information.IUniversityService;
 
 @Service
 public class UniversityServiceImpl implements IUniversityService{

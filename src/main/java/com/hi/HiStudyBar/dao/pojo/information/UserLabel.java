@@ -9,22 +9,27 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+/**
+ * 2018.1.26
+ * @author Tower
+ * 用户佩戴的标签的中间表所对应的实体类
+ */
 @Entity  
-@Table(name = "user_label")
+@Table(name = "t_user_label")
 public class UserLabel {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO) 
 	@Column(name="userlabel_id")
-	private Integer userlabelId;
+	private Integer userlabelId;//主键
 	
 	@ManyToOne(optional = true)
 	@JoinColumn(name = "u_id")
-	private User user;
+	private User user;//用户（外键）
 	
 	@ManyToOne(optional = true)
 	@JoinColumn(name = "l_id")
-	private Label label;
+	private Label label;//标签（外键）
 
 	public UserLabel() {
 		super();

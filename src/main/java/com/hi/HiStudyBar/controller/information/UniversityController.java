@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.hi.HiStudyBar.dao.pojo.information.University;
-import com.hi.HiStudyBar.service.information.intf.IUniversityService;
+import com.hi.HiStudyBar.service.intf.information.IUniversityService;
 
 @Controller
 @SpringBootApplication

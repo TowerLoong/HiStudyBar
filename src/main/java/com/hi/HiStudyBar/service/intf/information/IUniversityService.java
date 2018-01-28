@@ -1,4 +1,4 @@
-package com.hi.HiStudyBar.service.information.intf;
+package com.hi.HiStudyBar.service.intf.information;
 
 import com.hi.HiStudyBar.dao.pojo.information.University;
 

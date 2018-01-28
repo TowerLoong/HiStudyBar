@@ -9,46 +9,51 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+/**
+ * 2018.1.26
+ * @author Tower
+ * 用户表对应的实体类
+ */
 @Entity  
-@Table(name = "user")
+@Table(name = "t_user")
 public class User {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO) 
 	@Column(name = "u_id")
-	private Integer uId;
+	private Integer uId;//主键
 	
 	@Column(name = "u_name", nullable = false , length = 20) 
-	private String uName;
+	private String uName;//用户昵称（少于15个字符）
 	
 	@Column(name = "u_password", nullable = false , length = 20) 
-	private String uPassword;
+	private String uPassword;//用户密码（少于15个字符）
 	
-	@Column(name = "u_true_name" , length = 20) 
-	private String uTrueName;
+	@Column(name = "u_true_name" , length = 50) 
+	private String uTrueName;//用户的真实姓名（少于30个字符）
 	
-	@Column(name = "u_sex" , length = 2) 
-	private String uSex;
+	@Column(name = "u_sex" , length = 30) 
+	private String uSex;//用户性别（少于20个字符）
 	
-	@Column(name = "u_head_pic" , length = 100) 
-	private String uHeadPic;
+	@Column(name = "u_head_pic" , length = 150) 
+	private String uHeadPic;//用户头像的路径（少于100个字符）
 	
 	 // 多对一：optional=false表示外键不能为空
 	@ManyToOne(optional = true)
 	@JoinColumn(name = "univ_id")
-	private University university;
+	private University university;//用户的大学（外键）
 	
-	@Column(name = "u_institute" , length = 20) 
-	private String uInstitute;
+	@Column(name = "u_institute" , length = 100) 
+	private String uInstitute;//用户的学院（少于50个字符）
 	
-	@Column(name = "u_magor" , length = 20) 
-	private String uMagor;
+	@Column(name = "u_magor" , length = 100) 
+	private String uMagor;//用户的专业（少于50个字符）
 	
-	@Column(name = "u_phonenumber" , length = 20) 
-	private String uPhonenumber;
+	@Column(name = "u_phonenumber" , length = 30) 
+	private String uPhonenumber;//用户的电话号码（少于20个字符）
 	
-	@Column(name = "u_email" , length = 50) 
-	private String uEmail;
+	@Column(name = "u_email" , length = 100) 
+	private String uEmail;//用户的邮箱（少于50个字符）
 
 	public User() {
 		super();
