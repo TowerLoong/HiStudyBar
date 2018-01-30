@@ -8,7 +8,7 @@ import com.hi.HiStudyBar.dao.pojo.information.UnivLabel;
 /**
  * 2018.1.28
  * @author Tower
- * 操控UnivLabel的dao层接口
+ * 操控UnivLabel大学标签对应表的dao层接口
  */
 @Repository
 public interface IUnivLabelDao extends JpaRepository<UnivLabel,Integer>{

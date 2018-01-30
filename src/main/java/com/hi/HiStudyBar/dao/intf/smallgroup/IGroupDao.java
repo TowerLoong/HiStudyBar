@@ -8,7 +8,7 @@ import com.hi.HiStudyBar.dao.pojo.smallgroup.Group;
 /**
  * 2018.1.28
  * @author Tower
- * 操控Group的dao层接口
+ * 操控Group群信息表的dao层接口
  */
 @Repository
 public interface IGroupDao extends JpaRepository<Group,Integer>{

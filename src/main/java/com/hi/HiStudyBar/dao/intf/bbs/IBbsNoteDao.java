@@ -8,7 +8,7 @@ import com.hi.HiStudyBar.dao.pojo.bbs.BbsNote;
 /**
  * 2018.1.28
  * @author Tower
- * 操控BbsNote的dao层接口
+ * 操控BbsNote帖子表的dao层接口
  */
 @Repository
 public interface IBbsNoteDao extends JpaRepository<BbsNote,Integer>{

@@ -8,7 +8,7 @@ import com.hi.HiStudyBar.dao.pojo.authoritytheme.ThemeTalk;
 /**
  * 2018.1.28
  * @author Tower
- * 操控ThemeTalk的dao层接口
+ * 操控ThemeTalk官方话题聊天记录表的dao层接口
  */
 @Repository
 public interface IThemeTalkDao extends JpaRepository<ThemeTalk,Integer>{

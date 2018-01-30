@@ -8,7 +8,7 @@ import com.hi.HiStudyBar.dao.pojo.authoritytheme.UserTheme;
 /**
  * 2018.1.28
  * @author Tower
- * 操控UserTheme的dao层接口
+ * 操控UserTheme用户话题关系表的dao层接口
  */
 @Repository
 public interface IUserThemeDao extends JpaRepository<UserTheme,Integer>{

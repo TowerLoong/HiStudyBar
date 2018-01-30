@@ -8,7 +8,7 @@ import com.hi.HiStudyBar.dao.pojo.smallgroup.Notice;
 /**
  * 2018.1.28
  * @author Tower
- * 操控Notice的dao层接口
+ * 操控Notice群公告表的dao层接口
  */
 @Repository
 public interface INoticeDao extends JpaRepository<Notice,Integer>{

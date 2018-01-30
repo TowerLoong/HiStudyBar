@@ -8,7 +8,7 @@ import com.hi.HiStudyBar.dao.pojo.information.User;
 /**
  * 2018.1.28
  * @author Tower
- * 操控User的dao层接口
+ * 操控User用户信息表的dao层接口
  */
 @Repository
 public interface IUserDao  extends JpaRepository<User,Integer>{

@@ -8,7 +8,7 @@ import com.hi.HiStudyBar.dao.pojo.information.University;
 /**
  * 2018.1.28
  * @author Tower
- * 操控University的dao层接口
+ * 操控University大学信息表的dao层接口
  */
 @Repository
 public interface IUniversityDao extends JpaRepository<University,Integer>{

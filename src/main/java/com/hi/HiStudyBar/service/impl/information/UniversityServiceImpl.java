@@ -7,6 +7,11 @@ import com.hi.HiStudyBar.dao.intf.information.IUniversityDao;
 import com.hi.HiStudyBar.dao.pojo.information.University;
 import com.hi.HiStudyBar.service.intf.information.IUniversityService;
 
+/**
+ * 2018.1.30
+ * @author Tower
+ * 大学信息业务
+ */
 @Service
 public class UniversityServiceImpl implements IUniversityService{
 

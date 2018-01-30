@@ -8,7 +8,7 @@ import com.hi.HiStudyBar.dao.pojo.smallgroup.GroupLabel;
 /**
  * 2018.1.28
  * @author Tower
- * 操控GroupLabel的dao层接口
+ * 操控GroupLabel群标签对应表的dao层接口
  */
 @Repository
 public interface IGroupLabelDao extends JpaRepository<GroupLabel,Integer>{

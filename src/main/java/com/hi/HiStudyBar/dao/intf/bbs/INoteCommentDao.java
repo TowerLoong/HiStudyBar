@@ -8,7 +8,7 @@ import com.hi.HiStudyBar.dao.pojo.bbs.NoteComment;
 /**
  * 2018.1.28
  * @author Tower
- * 操控NoteComment的dao层接口
+ * 操控NoteComment帖子评论表的dao层接口
  */
 @Repository
 public interface INoteCommentDao extends JpaRepository<NoteComment,Integer>{

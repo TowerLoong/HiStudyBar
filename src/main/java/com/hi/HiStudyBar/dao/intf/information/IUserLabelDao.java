@@ -8,7 +8,7 @@ import com.hi.HiStudyBar.dao.pojo.information.UserLabel;
 /**
  * 2018.1.28
  * @author Tower
- * 操控UserLabel的dao层接口
+ * 操控UserLabe用户标签对应表l的dao层接口
  */
 @Repository
 public interface IUserLabelDao extends JpaRepository<UserLabel,Integer>{

@@ -8,7 +8,7 @@ import com.hi.HiStudyBar.dao.pojo.schedule.Course;
 /**
  * 2018.1.28
  * @author Tower
- * 操控Course的dao层接口
+ * 操控Course课程信息表的dao层接口
  */
 @Repository
 public interface ICourseDao extends JpaRepository<Course,Integer>{
